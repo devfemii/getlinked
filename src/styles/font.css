@@ -1,0 +1,7 @@
+/* File: font.css */
+@font-face {
+    font-family: 'ClashDisplay';
+    src: local('CashDisplay'),
+         url('../assets//fonts/ClashDisplay-Bold.ttf') format('truetype');
+         font-weight: bold;
+}
