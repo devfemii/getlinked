@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { breakpoints, colors, sizes } from "./theme";
 
-export const FlexNav = styled.div`
+export const FlexNav = styled(motion.div)`
     /* max-width: ${sizes.bodyWidth}; */
     padding: 20px 40px;
     display: flex;

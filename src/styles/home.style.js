@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { breakpoints, sizes, colors } from './theme';
 import pright from '../assets/hero/pright.svg'
 import padimage from '../assets/Home/Vector.svg'
@@ -125,7 +126,7 @@ export const FlexContainer = styled.div`
 
 // Hero
 
-export const HeroH2 = styled.p`
+export const HeroH2 = styled(motion.p)`
     text-align: right;
     color: #FFF;
     font-size: 28px;
@@ -184,7 +185,7 @@ export const HeroH2 = styled.p`
     }
 `
 
-export const HeroTitle = styled.h2`
+export const HeroTitle = styled(motion.h2)`
     display: flex;
     gap: .5rem;
     align-items: center;

@@ -146,7 +146,11 @@ const Hompage = () => {
                 to the rules and guidelines of the hackathon, including deadlines, use of 
                 specific technologies or APIs, and any other competition-specific requirements.
                 </p>
-                <Button>Read More</Button>
+                <Button as={motion.button}
+              whileHover={{ scale: 1.1, y: -2 }} 
+              whileTap={{ scale: 0.9 }}
+              transition={{duration: .5}}
+                >Read More</Button>
             </div>
         </HomeWrapper>
         <div id="faq"></div>
@@ -562,7 +566,11 @@ const Hompage = () => {
                         <p>The Standard License grants you a non-exclusive right to
                         navigate and register for our event</p>
                     </span>
-                    <Button>Read More</Button>
+                    <Button as={motion.button}
+                        whileHover={{ scale: 1.1, y: -2 }} 
+                        whileTap={{ scale: 0.9 }}
+                        transition={{duration: .5}}
+                    >Read More</Button>
                 </TinyWrap>
             </div>
         </ReverseWrapper>

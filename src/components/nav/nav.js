@@ -65,7 +65,11 @@ const Nav = () => {
   return (
     <>
     <FlexContainer>
-        <FlexNav>
+        <FlexNav as={motion.div}
+          initial={{y:-100}}
+          animate={{y:0}}
+          transition={{duration: 1}}
+        >
             <img src={logo} alt="Homepage"
             onClick={navigateToHomepage}
             style={{ cursor: 'pointer' }}
@@ -77,7 +81,11 @@ const Nav = () => {
                 <Link to='/contact'>Contact</Link>
             </ul>
             <img onClick={()=> setOpen(open => !open)} src={menu} alt="menu" className='menu' />
-            <Button><Link to='/register'>Register</Link></Button>
+            <Button as={motion.button}
+              whileHover={{ scale: 1.1, y: -2 }} 
+              whileTap={{ scale: 0.9 }}
+              transition={{duration: .5}}
+            ><Link to='/register'>Register</Link></Button>
         </FlexNav>
     </FlexContainer>
     {
@@ -115,7 +123,11 @@ const Nav = () => {
           variants={variants}
         >Contact</Link>
       </motion.span>
-      <Button><Link to='/register'>Register</Link></Button>
+      <Button as={motion.button}
+              whileHover={{ scale: 1.1, y: -2 }} 
+              whileTap={{ scale: 0.9 }}
+              transition={{duration: .5}}
+      ><Link to='/register'>Register</Link></Button>
     </MobileNav> :
     ""
     }

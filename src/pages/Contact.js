@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import Nav from '../components/nav/nav'
 import insta from '../assets/footer/mdi_instagram.svg'
 import x from '../assets/footer/Vector.svg'
@@ -45,7 +46,12 @@ const Contact = () => {
                         <input type="text" placeholder="Your Name" id="" />
                         <input type="email" placeholder="E-mail" id="" />
                         <textarea placeholder="Your Message" id="" cols="4" rows="8"></textarea>
-                        <Button>Submit</Button>
+                        <Button
+                            as={motion.button}
+                            whileHover={{ scale: 1.1, y: -2 }} 
+                            whileTap={{ scale: 0.9 }}
+                            transition={{duration: .5}}
+                        >Submit</Button>
                     </form>
                 </FormWrap>
             </div>

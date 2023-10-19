@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { motion } from 'framer-motion';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Nav from '../components/nav/nav'
@@ -191,7 +192,12 @@ const Register = () => {
                             name="privacy_poclicy_accepted" id="" />
                             <label>I agreed with the event terms and conditions  and privacy policy</label>
                         </span>
-                        <Button>{isSubmitting ? 'Submitting...' : 'Submit' }</Button>
+                        <Button
+                            as={motion.button}
+                            whileHover={{ scale: 1.1, y: -2 }} 
+                            whileTap={{ scale: 0.9 }}
+                            transition={{duration: .5}}
+                        >{isSubmitting ? 'Submitting...' : 'Submit' }</Button>
                     </form>
                 </RegForm>
             </div>
