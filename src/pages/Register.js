@@ -92,7 +92,7 @@ const Register = () => {
 
   return (
     <>
-    {errors && <p>Error: {errors}</p>}
+    {/* {errors && <p>Error: {errors}</p>} */}
     { data ?
     <>
         <Nav />
